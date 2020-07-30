@@ -1,0 +1,48 @@
+{
+  "base_url": "",
+  "index_page": "",
+  "uri_protocol": "REQUEST_URI",
+  "time_reference": "",
+  "compression_output": false,
+  "language": "english",
+  "charset": "UTF-8",
+  "enable_hook": false,
+  "composer_autoload": false,
+  "permitted_uri_chars": "a-z 0-9~%.:_\\-",
+  "enable_query_strings": false,
+  "controller_trigger": "c",
+  "function_trigger": "m",
+  "directory_trigger": "d",
+  "migration": {
+	"type": "db",
+	"table": "migrations",
+	"auto_latest": false
+  },
+  "log": {
+	"threshold": 0,
+	"path": "",
+	"file_extension": "",
+	"file_permissions": "0644",
+	"date_format": "Y-m-d H:i:s"
+  },
+  "error_views_path": "",
+  "cache_path": "",
+  "cache_query_string": false,
+  "encryption_key": "",
+  "session": {
+	"driver": "files",
+	"cookie_name": "ri_session",
+	"expiration": 7200,
+	"save_path": null,
+	"match_ip": false,
+	"time_to_update": 300,
+	"regenerate_destroy": false
+  },
+  "cookie": {
+	"prefix": "",
+	"domain": "",
+	"path": "",
+	"secure": false,
+	"http_only": false
+  }
+}

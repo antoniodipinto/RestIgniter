@@ -62,7 +62,7 @@ class CI_Input {
 	 *
 	 * @var array
 	 */
-	protected $headers = array();
+	protected array $headers = [];
 
 	/**
 	 * Raw input stream data
@@ -71,7 +71,7 @@ class CI_Input {
 	 *
 	 * @var	string
 	 */
-	protected $_raw_input_stream;
+	protected string $_raw_input_stream;
 
 	/**
 	 * Parsed input stream data
@@ -81,7 +81,7 @@ class CI_Input {
 	 * @see	CI_Input::input_stream()
 	 * @var	array
 	 */
-	protected $_input_stream;
+	protected array $_input_stream;
 
 	/**
 	 * CI_Security instance
@@ -91,7 +91,7 @@ class CI_Input {
 	 *
 	 * @var	CI_Security
 	 */
-	protected $security;
+	protected CI_Security $security;
 
 	// --------------------------------------------------------------------
 
@@ -101,7 +101,7 @@ class CI_Input {
 	 * Determines whether to globally enable the XSS processing
 	 * and whether to allow the $_GET array.
 	 *
-	 * @return	void
+	 * @param CI_Security $security
 	 */
 	public function __construct(CI_Security &$security)
 	{
