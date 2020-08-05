@@ -49,8 +49,7 @@ class Response
 	 * @return array|string
 	 */
 	private static function _prepare($params) {
-		if (self::_isJson($params)) {
-
+		if (is_json($params)) {
 			return Encoding::toUTF8(json_decode($params));
 		}
 

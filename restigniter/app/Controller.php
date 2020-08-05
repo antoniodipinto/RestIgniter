@@ -4,10 +4,14 @@ namespace RestIgniter;
 
 class Controller
 {
+	protected const HTTP_METHOD_GET = "GET";
+	protected const HTTP_METHOD_POST = "POST";
+	protected const HTTP_METHOD_PUT = "PUT";
+	protected const HTTP_METHOD_DELETE = "DELETE";
 
 	private static Controller $_instance;
 
-	private Loader $load;
+	protected Loader $load;
 
 	public Request $request;
 
@@ -41,6 +45,8 @@ class Controller
 		self::$_instance = $this;
 		log_message('info', 'Controller Class Initialized');
 	}
+
+	public function method(string $method = "GET") {}
 
 	/**
 	 * Get the RI singleton

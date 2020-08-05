@@ -4,7 +4,13 @@
 namespace RestIgniter;
 
 
+use MongoDB\Driver\Session;
+use RestIgniter\Models\BaseConfiguration;
+use RestIgniter\Models\CookieConfiguration;
 use RestIgniter\Models\DatabaseConfiguration;
+use RestIgniter\Models\LogConfiguration;
+use RestIgniter\Models\MigrationConfiguration;
+use RestIgniter\Models\SessionConfiguration;
 
 class Configuration
 {
@@ -12,6 +18,18 @@ class Configuration
 	private static $_instance;
 
 	protected DatabaseConfiguration $_database_configuration;
+
+	protected BaseConfiguration  $_base_configuration;
+
+	protected CookieConfiguration  $_cookie_configuration;
+
+	protected LogConfiguration  $_log_configuration;
+
+	protected MigrationConfiguration  $_migration_configuration;
+
+	protected SessionConfiguration $_session_configuration;
+
+	protected Input $input;
 
 	private function __construct() {
 		//load all the configurations
@@ -31,9 +49,17 @@ class Configuration
 		return self::$_instance;
 	}
 
+	// Retrieve database configuration
 	public function db(): DatabaseConfiguration {
-		// Retrieve database configuration
 		return $this->_database_configuration;
+	}
+
+	public function base(): BaseConfiguration{
+		return $this->_base_configuration;
+	}
+
+	public function cookie(): CookieConfiguration{
+		return $this->_cookie_configuration;
 	}
 
 	public function get_config(string $name) {

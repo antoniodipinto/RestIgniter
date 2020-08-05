@@ -31,6 +31,7 @@
   "encryption_key": "",
   "session": {
 	"driver": "files",
+	"table_name":"",
 	"cookie_name": "ri_session",
 	"expiration": 7200,
 	"save_path": null,

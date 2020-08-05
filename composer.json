@@ -13,7 +13,9 @@
   "require": {
 	"php": ">=7.4",
 	"ext-json": "*",
-	"ext-apache": "*"
+	"ext-apache": "*",
+    "ext-ctype": "*",
+	"ext-zlib": "*"
   },
   "suggest": {
 	"paragonie/random_compat": "Provides better randomness in PHP 5.x"

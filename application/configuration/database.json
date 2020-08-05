@@ -4,7 +4,7 @@
   "default": true,
   "hostname": "",
   "username": "",
-  "password": "pas",
+  "password": "",
   "database": "",
   "charset": "utf8",
   "collation": "utf8_general_ci",

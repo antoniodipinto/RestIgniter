@@ -75,6 +75,37 @@ if ( ! function_exists('strip_slashes'))
 	}
 }
 
+
+// ------------------------------------------------------------------------
+
+if (!function_exists('string_contains')) {
+
+	/**
+	 * @param string $string
+	 *
+	 * @param string $search
+	 *
+	 * @return bool
+	 */
+	function string_contains($string, $search) {
+		return strpos($string, $search) !== false;
+	}
+}
+
+// ------------------------------------------------------------------------
+
+if (!function_exists('is_null_or_empty')) {
+
+	/**
+	 * @param string|array $data
+	 *
+	 * @return bool
+	 */
+	function is_null_or_empty($data) {
+		return is_null($data) || empty($data);
+	}
+}
+
 // ------------------------------------------------------------------------
 
 if ( ! function_exists('strip_quotes'))

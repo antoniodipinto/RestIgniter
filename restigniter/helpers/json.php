@@ -26,3 +26,25 @@ if (!function_exists('read_json')) {
 		return json_decode(file_get_contents($path));
 	}
 }
+
+// ------------------------------------------------------------------------
+
+if (!function_exists('is_json')) {
+	/**
+	 * Check if a given string is a json
+	 *
+	 * @param string $string
+	 *
+	 * @return bool
+	 */
+	function is_json($string) {
+		if (!is_null_or_empty($string) && is_string($string)) {
+			json_decode($string);
+
+			return (json_last_error() == JSON_ERROR_NONE);
+		}
+
+		return false;
+	}
+}
+

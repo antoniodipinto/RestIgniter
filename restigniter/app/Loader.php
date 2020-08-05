@@ -136,8 +136,8 @@ class Loader
 	 * Designed to be called from application controllers.
 	 *
 	 * @param mixed $library Library name
-	 * @param array $params Optional parameters to pass to the library class constructor
-	 * @param string $object_name An optional object name to assign to
+	 * @param null $params Optional parameters to pass to the library class constructor
+	 * @param null $object_name An optional object name to assign to
 	 * @return    object
 	 */
 	public function library($library, $params = NULL, $object_name = NULL) {
